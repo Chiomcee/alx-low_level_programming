@@ -7,32 +7,36 @@
  * @str: char
  * Return: 0
  */
-
 char *_strdup(char *str)
 {
-	char *ptStr;
-	int str_len = 0;
-	int i;
 
-	while (str[str_len] != '\0')
-	{
-		str_len++;
-	}
+	char *aaa;
+	int i, r = 0;
 
-	ptStr = malloc((str_len * sizeof(char)) + 1);
 
-	if (ptStr == NULL)
-	{
+	if (str == NULL)
+
 		return (NULL);
-	}
+
+	i = 0;
+
+	while (str[i] != '\0')
+
+		i++;
 
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		ptStr[i] = str[i];
-	}
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	ptStr[i] = '\0';
 
-	return (ptStr);
+	if (aaa == NULL)
+
+		return (NULL);
+
+
+	for (r = 0; str[r]; r++)
+
+		aaa[r] = str[r];
+
+
+	return (aaa);
 }
