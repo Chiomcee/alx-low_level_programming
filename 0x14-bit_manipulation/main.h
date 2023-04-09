@@ -1,6 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* Libraries*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
