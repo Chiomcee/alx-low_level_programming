@@ -53,13 +53,13 @@ void copy(char *file_from, char *file_to)
 	} while (wr == 1024);
 	if (close(from) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close from %d\n", from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
 		close(to);
 		exit(100);
 	}
 	if (close(to) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close to %d\n", to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
 		exit(100);
 	}
 
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usagde: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 				exit(97);
 	}
 	copy(argv[1], argv[2]);
