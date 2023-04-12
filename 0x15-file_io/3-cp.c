@@ -12,7 +12,7 @@ void error_file(int code, char *message)
 {
 	if (code == 98)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from the file %s\n", message);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", message);
 		exit(98);
 	}
 	if (code == 99)
