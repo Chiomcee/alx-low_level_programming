@@ -20,7 +20,7 @@ void close_elf(int elf);
  * check_elf - Function that checks an ELF file.
  * @e_ident: A pointer to the ELF magic numbers.
  *
- * Description: If the file is not an ELF file - exit code 98.
+ * Desc: If file is not an ELF file - exit code 98.
  */
 void check_elf(unsigned char *e_ident)
 {
@@ -42,8 +42,7 @@ void check_elf(unsigned char *e_ident)
 /**
  * print_magic - Func that prints magic numbers of an header ELF.
  * @e_ident: A pointer to the ELF magic numbers.
- *
- * Description: Magic numbers 
+ * Description: Magic numbers
  */
 void print_magic(unsigned char *e_ident)
 {
@@ -263,9 +262,7 @@ void close_elf(int elf)
  *        header ELF at the beginining of an ELF file.
  * @argc: Argument number supplied.
  * @argv: pointers to the arguments.
- *
  * Return: 0 on success.
- *
  * Description: Exit code 98 if func fails or
  * display a comprehensive error message to stderr.
  */
@@ -275,7 +272,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	int x, y;
 
 	x = open(argv[1], O_RDONLY);
-	
+
 	if (x == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
